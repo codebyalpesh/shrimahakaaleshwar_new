@@ -1,0 +1,943 @@
+/* =========================================================
+   NUMEROLOGY PAGE
+   Page-specific styles only
+   ========================================================= */
+
+
+/* =========================================================
+   01. PAGE HERO
+   ========================================================= */
+
+.numerology-hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-hero__title {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.numerology-hero__title span {
+    display: block;
+}
+
+.numerology-hero__description {
+    max-width: 720px;
+    margin-inline: auto;
+}
+
+.numerology-breadcrumb {
+    margin-top: var(--space-4);
+}
+
+
+/* =========================================================
+   02. INTRODUCTION
+   ========================================================= */
+
+.numerology-intro {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-intro__content {
+    max-width: 650px;
+}
+
+.numerology-text {
+    margin-bottom: var(--space-4);
+}
+
+.numerology-intro__button {
+    margin-top: var(--space-2);
+}
+
+
+/* =========================================================
+   03. NUMEROLOGY VISUAL
+   ========================================================= */
+
+.numerology-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 480px;
+}
+
+.numerology-wheel {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border: 2px solid var(--color-accent-500);
+    border-radius: 50%;
+}
+
+.numerology-wheel::before {
+    content: "";
+    position: absolute;
+    inset: 25px;
+    border: 1px dashed var(--color-primary-400);
+    border-radius: 50%;
+}
+
+.numerology-wheel::after {
+    content: "";
+    position: absolute;
+    inset: 75px;
+    border: 1px solid var(--color-secondary-300);
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   04. WHEEL NUMBERS
+   ========================================================= */
+
+.numerology-wheel__number {
+    position: absolute;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid var(--color-accent-500);
+    border-radius: 50%;
+
+    background: var(--color-surface);
+    color: var(--color-primary-600);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* Number Positions */
+
+.numerology-wheel__number--1 {
+    top: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.numerology-wheel__number--2 {
+    top: 8%;
+    right: 9%;
+}
+
+.numerology-wheel__number--3 {
+    top: 50%;
+    right: -26px;
+    transform: translateY(-50%);
+}
+
+.numerology-wheel__number--4 {
+    right: 9%;
+    bottom: 8%;
+}
+
+.numerology-wheel__number--5 {
+    bottom: -26px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.numerology-wheel__number--6 {
+    bottom: 8%;
+    left: 9%;
+}
+
+.numerology-wheel__number--7 {
+    top: 50%;
+    left: -26px;
+    transform: translateY(-50%);
+}
+
+.numerology-wheel__number--8 {
+    top: 8%;
+    left: 9%;
+}
+
+.numerology-wheel__number--9 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* =========================================================
+   05. WHEEL CENTER
+   ========================================================= */
+
+.numerology-wheel__center {
+    position: absolute;
+    z-index: 3;
+
+    top: 50%;
+    left: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 120px;
+
+    border: 2px solid var(--color-primary-500);
+    border-radius: 50%;
+
+    background: var(--color-surface);
+
+    color: var(--color-secondary-600);
+
+    transform: translate(-50%, -50%);
+
+    box-shadow: var(--shadow-md);
+}
+
+.numerology-wheel__center i {
+    margin-bottom: var(--space-1);
+
+    color: var(--color-accent-500);
+
+    font-size: var(--font-size-2xl);
+}
+
+.numerology-wheel__center span {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+}
+
+
+/* =========================================================
+   06. NUMEROLOGY SERVICES
+   ========================================================= */
+
+.numerology-services {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-service-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--space-6);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base),
+        border-color var(--transition-base);
+}
+
+.numerology-service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-accent-400);
+    box-shadow: var(--shadow-lg);
+}
+
+.numerology-service-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: var(--space-4);
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: var(--font-size-xl);
+}
+
+.numerology-service-card__title {
+    margin-bottom: var(--space-3);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text-heading);
+}
+
+.numerology-service-card__text {
+    margin-bottom: var(--space-4);
+
+    color: var(--color-text-muted);
+}
+
+.numerology-service-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    margin-top: auto;
+
+    color: var(--color-link);
+    font-weight: var(--font-weight-semibold);
+
+    text-decoration: none;
+}
+
+.numerology-service-card__link:hover {
+    color: var(--color-primary-700);
+}
+
+
+/* =========================================================
+   07. CORE NUMBERS
+   ========================================================= */
+
+.numerology-core {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-core-card {
+    height: 100%;
+
+    padding: var(--space-6);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.numerology-core-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.numerology-core-card__number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto var(--space-4);
+
+    border-radius: 50%;
+
+    background: var(--color-primary-500);
+    color: var(--color-neutral-0);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.numerology-core-card__title {
+    margin-bottom: var(--space-2);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text-heading);
+}
+
+.numerology-core-card__text {
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   08. NUMBER ANALYSIS
+   ========================================================= */
+
+.numerology-analysis {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-analysis-card {
+    height: 100%;
+
+    padding: var(--space-8);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.numerology-analysis-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto var(--space-4);
+
+    border-radius: 50%;
+
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: var(--font-size-2xl);
+}
+
+.numerology-analysis-card__title {
+    margin-bottom: var(--space-3);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text-heading);
+}
+
+.numerology-analysis-card__text {
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+}
+
+.numerology-analysis__content {
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   09. ANALYSIS FEATURES
+   ========================================================= */
+
+.numerology-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-3);
+
+    margin-top: var(--space-5);
+}
+
+.numerology-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    padding: var(--space-3);
+
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary-50);
+
+    color: var(--color-text-heading);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.numerology-feature i {
+    flex: 0 0 auto;
+
+    color: var(--color-success);
+}
+
+
+/* =========================================================
+   10. BENEFITS
+   ========================================================= */
+
+.numerology-benefits {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-benefit-card {
+    height: 100%;
+
+    padding: var(--space-5);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.numerology-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.numerology-benefit-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto var(--space-4);
+
+    border-radius: 50%;
+
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: var(--font-size-xl);
+}
+
+.numerology-benefit-card__title {
+    margin-bottom: var(--space-2);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text-heading);
+}
+
+.numerology-benefit-card__text {
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   11. CONSULTATION PROCESS
+   ========================================================= */
+
+.numerology-process {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-process-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: var(--space-6);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    background: var(--color-surface);
+
+    text-align: center;
+
+    transition:
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.numerology-process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.numerology-process-card__number {
+    position: absolute;
+
+    top: var(--space-4);
+    right: var(--space-4);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-primary-500);
+}
+
+.numerology-process-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    margin: 0 auto var(--space-4);
+
+    border-radius: 50%;
+
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: var(--font-size-xl);
+}
+
+.numerology-process-card__title {
+    margin-bottom: var(--space-3);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text-heading);
+}
+
+.numerology-process-card__text {
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   12. IMPORTANT NOTE
+   ========================================================= */
+
+.numerology-note {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-note-card {
+    padding: var(--space-8);
+
+    border: 1px solid var(--color-accent-300);
+    border-radius: var(--radius-lg);
+
+    background: var(--color-primary-50);
+}
+
+.numerology-note-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto var(--space-4);
+
+    border-radius: 50%;
+
+    background: var(--color-surface);
+    color: var(--color-primary-600);
+
+    font-size: var(--font-size-xl);
+}
+
+.numerology-note-card__title {
+    margin-bottom: var(--space-3);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-text-heading);
+}
+
+.numerology-note-card__text {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: var(--color-text-muted);
+}
+
+
+/* =========================================================
+   13. FAQ
+   ========================================================= */
+
+.numerology-faq {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-accordion .accordion-item {
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+}
+
+.numerology-accordion .accordion-item + .accordion-item {
+    margin-top: var(--space-3);
+}
+
+.numerology-accordion .accordion-button {
+    padding: var(--space-4) var(--space-5);
+
+    background: var(--color-surface);
+    color: var(--color-text-heading);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+
+    box-shadow: none;
+}
+
+.numerology-accordion .accordion-button:not(.collapsed) {
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
+}
+
+.numerology-accordion .accordion-button:focus {
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.numerology-accordion .accordion-body {
+    color: var(--color-text-muted);
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   14. CTA
+   ========================================================= */
+
+.numerology-cta {
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.numerology-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-3);
+
+    margin-top: var(--space-5);
+}
+
+
+/* =========================================================
+   15. TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .numerology-visual {
+        min-height: 420px;
+    }
+
+    .numerology-wheel {
+        width: 330px;
+        height: 330px;
+    }
+
+    .numerology-wheel__number {
+        width: 48px;
+        height: 48px;
+    }
+
+    .numerology-wheel__center {
+        width: 105px;
+        height: 105px;
+    }
+
+    .numerology-wheel__number--1,
+    .numerology-wheel__number--5 {
+        transform: translateX(-50%);
+    }
+
+    .numerology-wheel__number--3,
+    .numerology-wheel__number--7 {
+        transform: translateY(-50%);
+    }
+
+    .numerology-wheel__number--9 {
+        transform: translate(-50%, -50%);
+    }
+
+    .numerology-analysis-card {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+}
+
+
+/* =========================================================
+   16. MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .numerology-hero__title span {
+        display: inline;
+    }
+
+    .numerology-visual {
+        min-height: 350px;
+    }
+
+    .numerology-wheel {
+        width: 280px;
+        height: 280px;
+    }
+
+    .numerology-wheel::before {
+        inset: 18px;
+    }
+
+    .numerology-wheel::after {
+        inset: 55px;
+    }
+
+    .numerology-wheel__number {
+        width: 42px;
+        height: 42px;
+
+        font-size: var(--font-size-base);
+    }
+
+    .numerology-wheel__center {
+        width: 90px;
+        height: 90px;
+    }
+
+    .numerology-wheel__center i {
+        font-size: var(--font-size-lg);
+    }
+
+    .numerology-wheel__number--1 {
+        top: -21px;
+    }
+
+    .numerology-wheel__number--3 {
+        right: -21px;
+    }
+
+    .numerology-wheel__number--5 {
+        bottom: -21px;
+    }
+
+    .numerology-wheel__number--7 {
+        left: -21px;
+    }
+
+    .numerology-features {
+        grid-template-columns: 1fr;
+    }
+
+    .numerology-service-card,
+    .numerology-core-card,
+    .numerology-benefit-card,
+    .numerology-process-card {
+        padding: var(--space-5);
+    }
+
+    .numerology-note-card {
+        padding: var(--space-6);
+    }
+
+    .numerology-accordion .accordion-button {
+        padding: var(--space-4);
+        font-size: var(--font-size-sm);
+    }
+
+    .numerology-accordion .accordion-body {
+        padding-inline: var(--space-4);
+    }
+
+}
+
+
+/* =========================================================
+   17. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .numerology-wheel {
+        width: 240px;
+        height: 240px;
+    }
+
+    .numerology-wheel::before {
+        inset: 15px;
+    }
+
+    .numerology-wheel::after {
+        inset: 45px;
+    }
+
+    .numerology-wheel__number {
+        width: 38px;
+        height: 38px;
+    }
+
+    .numerology-wheel__center {
+        width: 78px;
+        height: 78px;
+    }
+
+    .numerology-wheel__center span {
+        font-size: var(--font-size-xs);
+    }
+
+    .numerology-wheel__number--1 {
+        top: -19px;
+    }
+
+    .numerology-wheel__number--3 {
+        right: -19px;
+    }
+
+    .numerology-wheel__number--5 {
+        bottom: -19px;
+    }
+
+    .numerology-wheel__number--7 {
+        left: -19px;
+    }
+
+    .numerology-cta__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .numerology-cta__actions .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   18. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .numerology-service-card,
+    .numerology-core-card,
+    .numerology-benefit-card,
+    .numerology-process-card {
+        transition: none;
+    }
+
+}

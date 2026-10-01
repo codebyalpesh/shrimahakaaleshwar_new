@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:opsz,wght@18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap');   
+
+/* =========================================================
+   SHRI MAHAKAALESHWAR
+   DESIGN SYSTEM — VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* =====================================================
+       01. BRAND COLORS
+       ===================================================== */
+
+    --color-primary-50:  #FFFBEB;
+    --color-primary-100: #FEF3C7;
+    --color-primary-200: #FDE68A;
+    --color-primary-300: #FCD34D;
+    --color-primary-400: #FBBF24;
+    --color-primary-500: #F59E0B;
+    --color-primary-600: #D97706;
+    --color-primary-700: #B45309;
+    --color-primary-800: #92400E;
+    --color-primary-900: #78350F;
+
+    --color-primary: var(--color-primary-500);
+    --color-primary-hover: var(--color-primary-600);
+    --color-primary-active: var(--color-primary-700);
+
+
+    /* =====================================================
+       02. SECONDARY / MAROON
+       ===================================================== */
+
+    --color-secondary-50:  #FFF1F2;
+    --color-secondary-100: #FFE4E6;
+    --color-secondary-200: #FECDD3;
+    --color-secondary-300: #FDA4AF;
+    --color-secondary-400: #FB7185;
+    --color-secondary-500: #8B1E3F;
+    --color-secondary-600: #741832;
+    --color-secondary-700: #64152D;
+    --color-secondary-800: #521126;
+    --color-secondary-900: #3F0D1C;
+
+    --color-secondary: var(--color-secondary-500);
+    --color-secondary-hover: var(--color-secondary-600);
+    --color-secondary-active: var(--color-secondary-700);
+
+
+    /* =====================================================
+       03. ACCENT / GOLD
+       ===================================================== */
+
+    --color-accent-50:  #FFFBEB;
+    --color-accent-100: #FEF3C7;
+    --color-accent-200: #FDE68A;
+    --color-accent-300: #FCD34D;
+    --color-accent-400: #FACC15;
+    --color-accent-500: #D4AF37;
+    --color-accent-600: #B8962E;
+    --color-accent-700: #967A24;
+    --color-accent-800: #78611D;
+    --color-accent-900: #5C4916;
+
+    --color-accent: var(--color-accent-500);
+    --color-accent-hover: var(--color-accent-600);
+    --color-accent-active: var(--color-accent-700);
+
+
+    /* =====================================================
+       04. NEUTRAL COLORS
+       ===================================================== */
+
+    --color-neutral-50:  #FAFAFA;
+    --color-neutral-100: #F5F5F5;
+    --color-neutral-200: #E5E5E5;
+    --color-neutral-300: #D4D4D4;
+    --color-neutral-400: #A3A3A3;
+    --color-neutral-500: #737373;
+    --color-neutral-600: #525252;
+    --color-neutral-700: #404040;
+    --color-neutral-800: #262626;
+    --color-neutral-900: #171717;
+    --color-neutral-950: #0A0A0A;
+
+
+    /* =====================================================
+       05. BLACK / WHITE
+       ===================================================== */
+
+    --color-black: #111111;
+    --color-white: #FFFFFF;
+
+
+    /* =====================================================
+       06. SEMANTIC COLORS
+       ===================================================== */
+
+    --color-success: #16A34A;
+    --color-success-hover: #15803D;
+
+    --color-danger: #DC2626;
+    --color-danger-hover: #B91C1C;
+
+    --color-warning: #F59E0B;
+    --color-warning-hover: #D97706;
+
+    --color-info: #2563EB;
+    --color-info-hover: #1D4ED8;
+
+
+    /* =====================================================
+       07. BACKGROUND
+       ===================================================== */
+
+    --color-bg: #FFFDF8;
+    --color-bg-subtle: #FFF8ED;
+    --color-bg-muted: #F8F5F0;
+
+    --color-surface: #FFFFFF;
+    --color-surface-hover: #FFFCF7;
+
+    --color-surface-dark: #18110D;
+    --color-surface-maroon: var(--color-secondary-900);
+
+
+    /* =====================================================
+       08. TEXT
+       ===================================================== */
+
+    --color-text: #211A16;
+    --color-text-primary: #211A16;
+    --color-text-secondary: #514942;
+    --color-text-muted: #746C65;
+    --color-text-light: #A49B93;
+
+    --color-text-inverse: #FFFFFF;
+
+    --color-heading: #241712;
+
+
+    /* =====================================================
+       09. BORDER
+       ===================================================== */
+
+    --color-border: #E7DED4;
+    --color-border-light: #F0EAE3;
+    --color-border-dark: #3A302B;
+
+    --color-divider: var(--color-border);
+
+
+    /* =====================================================
+       10. INTERACTIVE
+       ===================================================== */
+
+    --color-link: var(--color-primary-600);
+    --color-link-hover: var(--color-secondary-500);
+
+    --color-focus-ring: rgba(245, 158, 11, 0.35);
+
+
+    /* =====================================================
+       11. TYPOGRAPHY
+       ===================================================== */
+
+    --font-primary:
+        "Poppins",
+        "Noto Sans Devanagari",
+        sans-serif;
+
+    --font-secondary:
+        "Merriweather",
+        "Noto Serif Devanagari",
+        serif;
+
+    --font-mono:
+        "JetBrains Mono",
+        monospace;
+
+
+    /* =====================================================
+       12. FONT SIZE
+       ===================================================== */
+
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+
+    --font-size-display:
+        clamp(2.5rem, 5vw, 4.5rem);
+
+    --font-size-h1:
+        clamp(2.25rem, 4vw, 3.75rem);
+
+    --font-size-h2:
+        clamp(1.875rem, 3vw, 3rem);
+
+    --font-size-h3:
+        clamp(1.5rem, 2vw, 2.25rem);
+
+
+    /* =====================================================
+       13. FONT WEIGHT
+       ===================================================== */
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+
+    /* =====================================================
+       14. LINE HEIGHT
+       ===================================================== */
+
+    --line-height-none: 1;
+    --line-height-tight: 1.2;
+    --line-height-snug: 1.35;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.7;
+    --line-height-loose: 2;
+
+
+    /* =====================================================
+       15. LETTER SPACING
+       ===================================================== */
+
+    --letter-spacing-tight: -0.025em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.025em;
+    --letter-spacing-wider: 0.05em;
+
+
+    /* =====================================================
+       16. SPACING — 8PT GRID
+       ===================================================== */
+
+    --space-0: 0;
+    --space-1: 0.25rem;   /* 4px */
+    --space-2: 0.5rem;    /* 8px */
+    --space-3: 0.75rem;   /* 12px */
+    --space-4: 1rem;      /* 16px */
+    --space-5: 1.25rem;   /* 20px */
+    --space-6: 1.5rem;    /* 24px */
+    --space-7: 1.75rem;   /* 28px */
+    --space-8: 2rem;      /* 32px */
+    --space-10: 2.5rem;   /* 40px */
+    --space-12: 3rem;     /* 48px */
+    --space-14: 3.5rem;   /* 56px */
+    --space-16: 4rem;     /* 64px */
+    --space-20: 5rem;     /* 80px */
+    --space-24: 6rem;     /* 96px */
+    --space-32: 8rem;     /* 128px */
+
+
+    /* =====================================================
+       17. CONTAINER
+       ===================================================== */
+
+    --container-sm: 540px;
+    --container-md: 720px;
+    --container-lg: 960px;
+    --container-xl: 1140px;
+    --container-2xl: 1320px;
+
+
+    /* =====================================================
+       18. BORDER RADIUS
+       ===================================================== */
+
+    --radius-none: 0;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+
+
+    /* =====================================================
+       19. SHADOW
+       ===================================================== */
+
+    --shadow-none: none;
+
+    --shadow-xs:
+        0 1px 2px rgba(0, 0, 0, 0.04);
+
+    --shadow-sm:
+        0 2px 6px rgba(0, 0, 0, 0.06);
+
+    --shadow-md:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+
+    --shadow-lg:
+        0 16px 40px rgba(0, 0, 0, 0.14);
+
+    --shadow-xl:
+        0 24px 60px rgba(0, 0, 0, 0.18);
+
+
+    /* =====================================================
+       20. TRANSITIONS
+       ===================================================== */
+
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 400ms ease;
+
+
+    /* =====================================================
+       21. Z-INDEX
+       ===================================================== */
+
+    --z-base: 1;
+    --z-dropdown: 1000;
+    --z-sticky: 1100;
+    --z-fixed: 1200;
+    --z-overlay: 1300;
+    --z-modal: 1400;
+    --z-popover: 1500;
+    --z-tooltip: 1600;
+
+
+    /* =====================================================
+       22. LAYOUT
+       ===================================================== */
+
+    --header-height: 80px;
+    --section-padding: 80px;
+
+    --content-max-width: 1320px;
+
+
+    /* =====================================================
+       23. OPACITY
+       ===================================================== */
+
+    --opacity-disabled: 0.5;
+    --opacity-muted: 0.7;
+    --opacity-overlay: 0.6;
+}

@@ -1,0 +1,464 @@
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   HOME SECTION BASE
+   ========================================================= */
+
+.home-hero,
+.home-about,
+.home-services,
+.home-why,
+.home-process,
+.home-testimonials {
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.home-hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+
+    padding-block: var(--space-12);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-bg) 0%,
+            var(--color-surface) 100%
+        );
+}
+
+.home-hero__row {
+    min-height: calc(100vh - 80px);
+}
+
+.home-hero__content {
+    max-width: 620px;
+}
+
+.home-hero__eyebrow {
+    display: inline-block;
+
+    margin-bottom: var(--space-4);
+
+    color: var(--color-secondary);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+}
+
+.home-hero__title {
+    margin-bottom: var(--space-5);
+
+    color: var(--color-heading);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+
+    line-height: var(--line-height-tight);
+}
+
+.home-hero__title span {
+    display: block;
+
+    color: var(--color-secondary);
+}
+
+.home-hero__text {
+    max-width: 600px;
+
+    margin-bottom: var(--space-7);
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+}
+
+.home-hero__actions {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: var(--space-3);
+}
+
+.home-hero__stats {
+    display: flex;
+    align-items: stretch;
+
+    margin-top: var(--space-10);
+}
+
+.home-hero__stat {
+    min-width: 120px;
+
+    padding-inline: var(--space-5);
+
+    border-right: 1px solid var(--color-border);
+}
+
+.home-hero__stat:first-child {
+    padding-left: 0;
+}
+
+.home-hero__stat:last-child {
+    border-right: 0;
+}
+
+.home-hero__stat strong {
+    display: block;
+
+    margin-bottom: var(--space-1);
+
+    color: var(--color-secondary);
+
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.home-hero__stat span {
+    display: block;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-xs);
+}
+
+.home-hero__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-hero__image {
+    width: 100%;
+    max-width: 600px;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: var(--radius-lg);
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.home-about {
+    padding-block: var(--space-16);
+
+    background: var(--color-surface);
+}
+
+.home-about__media {
+    overflow: hidden;
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+}
+
+.home-about__image {
+    width: 100%;
+
+    transition: transform var(--transition-slow);
+}
+
+.home-about__media:hover .home-about__image {
+    transform: scale(1.02);
+}
+
+.home-about__content {
+    max-width: 620px;
+}
+
+.home-about__text {
+    margin-bottom: var(--space-4);
+
+    color: var(--color-text-muted);
+
+    line-height: var(--line-height-relaxed);
+}
+
+.home-about__features {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: var(--space-3);
+
+    margin-top: var(--space-6);
+}
+
+.home-about__feature {
+    display: flex;
+    align-items: center;
+
+    gap: var(--space-2);
+
+    color: var(--color-text);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.home-about__feature i {
+    color: var(--color-primary);
+}
+
+.home-about__button {
+    margin-top: var(--space-5);
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.home-services {
+    padding-block: var(--space-16);
+
+    background: var(--color-bg);
+}
+
+.home-services__action {
+    margin-top: var(--space-10);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   WHY CHOOSE
+   ========================================================= */
+
+.home-why {
+    padding-block: var(--space-16);
+
+    background: var(--color-surface);
+}
+
+
+/* =========================================================
+   PROCESS
+   ========================================================= */
+
+.home-process {
+    padding-block: var(--space-16);
+
+    background: var(--color-bg);
+}
+
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+.home-testimonials {
+    padding-block: var(--space-16);
+
+    background: var(--color-surface);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .home-hero__title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .home-hero__text {
+        font-size: var(--font-size-base);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .home-hero {
+        min-height: auto;
+
+        padding-block: var(--space-10);
+    }
+
+    .home-hero__row {
+        min-height: auto;
+    }
+
+    .home-hero__content {
+        max-width: 100%;
+
+        text-align: center;
+    }
+
+    .home-hero__eyebrow {
+        margin-bottom: var(--space-3);
+    }
+
+    .home-hero__title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .home-hero__text {
+        margin-inline: auto;
+    }
+
+    .home-hero__actions {
+        justify-content: center;
+    }
+
+    .home-hero__stats {
+        justify-content: center;
+    }
+
+    .home-hero__media {
+        margin-top: var(--space-10);
+    }
+
+    .home-hero__image {
+        max-width: 520px;
+    }
+
+    .home-about,
+    .home-services,
+    .home-why,
+    .home-process,
+    .home-testimonials {
+        padding-block: var(--space-12);
+    }
+
+    .home-about__content {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .home-hero {
+        padding-block: var(--space-8);
+    }
+
+    .home-hero__title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .home-hero__text {
+        font-size: var(--font-size-base);
+    }
+
+    .home-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .home-hero__actions .btn {
+        width: 100%;
+    }
+
+    .home-hero__stats {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        margin-top: var(--space-8);
+    }
+
+    .home-hero__stat {
+        min-width: 0;
+
+        padding-inline: var(--space-2);
+
+        text-align: center;
+    }
+
+    .home-hero__stat:first-child {
+        padding-left: var(--space-2);
+    }
+
+    .home-hero__stat strong {
+        font-size: var(--font-size-lg);
+    }
+
+    .home-hero__stat span {
+        font-size: 11px;
+    }
+
+    .home-hero__media {
+        margin-top: var(--space-8);
+    }
+
+    .home-about,
+    .home-services,
+    .home-why,
+    .home-process,
+    .home-testimonials {
+        padding-block: var(--space-10);
+    }
+
+    .home-about__features {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .home-hero__title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .home-hero__stats {
+        gap: var(--space-1);
+    }
+
+    .home-hero__stat {
+        padding-inline: var(--space-1);
+    }
+
+    .home-hero__stat strong {
+        font-size: var(--font-size-base);
+    }
+
+    .home-hero__stat span {
+        font-size: 10px;
+    }
+
+    .home-about__feature {
+        font-size: var(--font-size-xs);
+    }
+
+}

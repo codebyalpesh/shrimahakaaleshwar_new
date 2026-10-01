@@ -1,0 +1,119 @@
+/* =========================================================
+   PRIVACY POLICY PAGE
+   ========================================================= */
+
+.privacy-hero-section {
+    padding-block: var(--space-16);
+}   
+
+
+/* =========================================================
+   PAGE SECTION
+   ========================================================= */
+
+.privacy-policy-section {
+    background: var(--color-background, #fff);
+}
+
+
+/* =========================================================
+   LEGAL CONTENT CONTAINER
+   ========================================================= */
+
+.privacy-policy-section .legal-content {
+    padding: 2.5rem 3rem;
+
+    border: 1px solid var(--color-border, #e5e5e5);
+
+    border-radius: var(--radius-lg, 1rem);
+
+    background: var(--color-surface, #fff);
+
+    box-shadow:
+        0 1rem 3rem rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================================
+   FIRST SECTION
+   ========================================================= */
+
+.privacy-policy-section .legal-section:first-child {
+    padding-top: 0;
+}
+
+
+/* =========================================================
+   LAST SECTION
+   ========================================================= */
+
+.privacy-policy-section .legal-section:last-of-type {
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   PRIVACY POLICY NUMBER
+   ========================================================= */
+
+.privacy-policy-section .legal-number {
+    background:
+        var(--color-primary, #d97706);
+}
+
+
+/* =========================================================
+   PRIVACY POLICY LIST
+   ========================================================= */
+
+.privacy-policy-section .legal-section li::marker {
+    color: var(--color-primary, #d97706);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .privacy-policy-section .legal-content {
+        padding: 2rem;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    .privacy-policy-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+
+    .privacy-policy-section .legal-content {
+        padding: 1.5rem;
+
+        border-radius: var(--radius-md, 0.75rem);
+
+        box-shadow:
+            0 0.75rem 2rem rgba(0, 0, 0, 0.04);
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .privacy-policy-section .legal-content {
+        padding: 1.25rem;
+    }
+
+
+    .privacy-policy-section .legal-section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.75rem;
+    }
+
+}

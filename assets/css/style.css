@@ -1,0 +1,30 @@
+/* BASE */
+
+@import url('./base/variables.css');
+@import url('./base/base.css');
+@import url('./base/typography.css');
+@import url('./base/utilities.css');
+
+/* LAYOUT */
+
+@import url('./components/components.css');
+
+/* LAYOUT */
+
+@import url('./layout/header.css');
+@import url('./layout/navigation.css');
+@import url('./layout/footer.css');
+
+/* PAGES */
+
+@import url('./pages/home.css');
+@import url('./pages/about.css');
+@import url('./pages/services.css');
+@import url('./pages/kundli.css');
+@import url('./pages/numerology.css');
+@import url('./pages/rashifal.css');
+@import url('./pages/contact.css');
+@import url('./pages/appointment.css');
+@import url('./pages/privacy-policy.css');
+@import url('./pages/terms.css');
+@import url('./pages/disclaimer.css');

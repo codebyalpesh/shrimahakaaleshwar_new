@@ -1,0 +1,292 @@
+/* =========================================================
+   SERVICES PAGE
+   ========================================================= */
+
+
+/* =========================================================
+   01. PAGE HERO
+   ========================================================= */
+
+.services-page-hero {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   02. SERVICES LIST
+   ========================================================= */
+
+.services-list {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   03. SERVICE CARD
+   ========================================================= */
+
+.services-list .service-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+ * Link को bottom पर रखने से सभी cards की height
+ * visually consistent रहती है.
+ */
+
+.services-list .service-card__link {
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   04. SERVICE DETAIL
+   ========================================================= */
+
+.services-detail {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+/* Alternate section background */
+
+.services-detail--numerology {
+    background-color: var(--color-surface);
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   05. SERVICE DETAIL IMAGE
+   ========================================================= */
+
+.services-detail__image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+}
+
+
+.services-detail__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   06. SERVICE DETAIL FEATURES
+   ========================================================= */
+
+.services-detail__features {
+    margin-top: var(--space-6);
+}
+
+
+/* =========================================================
+   07. NUMEROLOGY HIGHLIGHT
+   ========================================================= */
+
+.services-detail__highlight {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   08. CONSULTATION PROCESS
+   ========================================================= */
+
+.services-process {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+/*
+ * Process cards are already shared components.
+ * Page-specific spacing only.
+ */
+
+.services-process .process-card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   09. WHY CHOOSE
+   ========================================================= */
+
+.services-why {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+.services-why .choose-card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   10. CTA
+   ========================================================= */
+
+.services-cta {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   11. ACCESSIBILITY
+   ========================================================= */
+
+.services-page-hero a:focus-visible,
+.services-list a:focus-visible,
+.services-detail a:focus-visible,
+.services-cta a:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   12. RESPONSIVE
+   IMPORTANT:
+   Services page responsive CSS stays in this file.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Large Tablet / Small Desktop
+   --------------------------------------------------------- */
+
+@media (max-width: 1199.98px) {
+
+    .services-list .service-card {
+        padding: var(--space-6);
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Tablet
+   --------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+
+    .services-detail__highlight {
+        min-height: 320px;
+    }
+
+
+    .services-detail__image {
+        max-width: 760px;
+        margin-inline: auto;
+    }
+
+
+    .services-process .process-card {
+        min-height: 100%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    .services-list .service-card {
+        padding: var(--space-5);
+    }
+
+
+    .services-detail__image {
+        border-radius: var(--radius-lg);
+    }
+
+
+    .services-detail__highlight {
+        min-height: auto;
+    }
+
+
+    .services-detail__features {
+        margin-top: var(--space-5);
+    }
+
+
+    .services-process .process-card {
+        min-height: auto;
+    }
+
+
+    .services-cta .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .services-cta .hero-buttons .btn {
+        width: 100%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Small Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 575.98px) {
+
+    .services-list .service-card {
+        padding: var(--space-5);
+    }
+
+
+    .services-detail__image {
+        border-radius: var(--radius-md);
+    }
+
+
+    .services-cta .hero-buttons {
+        gap: var(--space-3);
+    }
+
+}
+
+
+/* =========================================================
+   13. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .services-page-hero *,
+    .services-list *,
+    .services-detail *,
+    .services-process *,
+    .services-why *,
+    .services-cta * {
+        scroll-behavior: auto;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

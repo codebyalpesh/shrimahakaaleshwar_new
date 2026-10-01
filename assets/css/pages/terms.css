@@ -1,0 +1,43 @@
+/* =========================================================
+   TERMS & CONDITIONS PAGE
+   Page-specific styles only
+   ========================================================= */
+
+.terms-page {
+    overflow-x: hidden;
+}
+
+.terms-hero-section {
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   TERMS CONTENT
+   ========================================================= */
+
+.terms-page .legal-content {
+    max-width: 920px;
+}
+
+
+/* =========================================================
+   TERMS HERO
+   ========================================================= */
+
+.terms-page .page-hero-section {
+    position: relative;
+}
+
+
+/* =========================================================
+   TERMS MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .terms-page .page-hero-section {
+        padding-inline: 1rem;
+    }
+
+}

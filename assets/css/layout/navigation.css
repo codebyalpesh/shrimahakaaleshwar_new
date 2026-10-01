@@ -1,0 +1,251 @@
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.site-nav {
+    width: 100%;
+    padding: 0;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.site-nav__brand {
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--color-secondary) !important;
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.site-nav__brand:hover {
+    color: var(--color-primary) !important;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NAV LIST
+   ========================================================= */
+
+.site-nav__list {
+    align-items: center;
+
+    gap: var(--space-2);
+}
+
+.site-nav__item {
+    margin: 0;
+}
+
+
+/* =========================================================
+   NAV LINK
+   ========================================================= */
+
+.site-nav__link {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: var(--space-3) var(--space-3) !important;
+
+    color: var(--color-text) !important;
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+
+    white-space: nowrap;
+
+    transition:
+        color var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+.site-nav__link::after {
+    content: "";
+
+    position: absolute;
+
+    left: var(--space-3);
+    right: var(--space-3);
+    bottom: 4px;
+
+    height: 2px;
+
+    background: var(--color-primary);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform var(--transition-fast);
+}
+
+.site-nav__link:hover {
+    color: var(--color-secondary) !important;
+}
+
+.site-nav__link:hover::after,
+.site-nav__link.active::after {
+    transform: scaleX(1);
+}
+
+.site-nav__link.active {
+    color: var(--color-secondary) !important;
+
+    font-weight: var(--font-weight-semibold);
+}
+
+
+/* =========================================================
+   NAV CTA
+   ========================================================= */
+
+.site-nav__cta {
+    flex-shrink: 0;
+
+    margin-left: var(--space-4);
+}
+
+
+/* =========================================================
+   MOBILE TOGGLE
+   ========================================================= */
+
+.site-nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    color: var(--color-secondary);
+
+    background: transparent;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    box-shadow: none !important;
+}
+
+.site-nav__toggle:hover {
+    color: var(--color-primary);
+
+    border-color: var(--color-primary);
+}
+
+.site-nav__toggle:focus-visible {
+    color: var(--color-secondary);
+
+    border-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   TOGGLE ICON
+   ========================================================= */
+
+.site-nav__toggle-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   BOOTSTRAP OVERRIDE
+   ========================================================= */
+
+.site-nav .navbar-toggler-icon {
+    display: none;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .site-nav__collapse {
+        padding-block: var(--space-4);
+    }
+
+    .site-nav__list {
+        width: 100%;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding-block: var(--space-2);
+    }
+
+    .site-nav__item {
+        width: 100%;
+    }
+
+    .site-nav__link {
+        width: 100%;
+
+        padding: var(--space-3) var(--space-2) !important;
+    }
+
+    .site-nav__link::after {
+        left: 0;
+        right: auto;
+        bottom: 0;
+
+        width: 32px;
+    }
+
+    .site-nav__cta {
+        display: inline-flex;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin: var(--space-3) 0 0;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .site-nav__brand {
+        font-size: var(--font-size-lg);
+    }
+
+    .site-nav__toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+}

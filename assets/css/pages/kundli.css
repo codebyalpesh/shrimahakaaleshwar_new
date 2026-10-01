@@ -1,0 +1,438 @@
+/* =========================================================
+   KUNDLI PAGE CSS
+   File: assets/css/pages/kundli.css
+   Purpose: Kundli / Birth Chart page-specific styling
+   ========================================================= */
+
+
+/* =========================================================
+   1. PAGE HERO
+   ========================================================= */
+
+.kundli-page-hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.kundli-page-hero .page-title {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.kundli-page-hero .page-description {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   2. KUNDLI INTRO
+   ========================================================= */
+
+.about-section {
+    padding-block: var(--space-16);
+}
+
+.about-section .about-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+}
+
+.about-section .about-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   3. KUNDLI INTRO FEATURES
+   ========================================================= */
+
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    padding: var(--space-4);
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.about-feature i {
+    flex: 0 0 auto;
+
+    width: 42px;
+    height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: 1rem;
+}
+
+.about-feature:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary-300);
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   4. KUNDLI ANALYSIS CARDS
+   ========================================================= */
+
+.services-section {
+    padding-block: var(--space-16);
+}   
+
+.services-section .service-card {
+    height: 100%;
+}
+
+.service-card .service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card .service-icon i {
+    line-height: 1;
+}
+
+
+/* =========================================================
+   5. BIRTH DETAILS / REQUIREMENTS
+   ========================================================= */
+
+.why-choose-section {
+    padding-block: var(--space-16);
+}  
+
+.why-choose-section .choose-card {
+    height: 100%;
+}
+
+.choose-card {
+    position: relative;
+}
+
+.choose-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: var(--space-4);
+
+    border-radius: 50%;
+
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: 1.25rem;
+
+    transition:
+        transform var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base);
+}
+
+.choose-card:hover .choose-icon {
+    transform: translateY(-3px);
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-0);
+}
+
+
+/* =========================================================
+   6. IMPORTANT NOTE
+   ========================================================= */
+
+.about-section .choose-card {
+    height: 100%;
+}
+
+.about-section .choose-card .choose-title {
+    margin-bottom: var(--space-4);
+}
+
+.about-section .choose-card .about-text {
+    max-width: 850px;
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   7. CONSULTATION PROCESS
+   ========================================================= */
+
+.process-section {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+.process-section .process-card {
+    height: 100%;
+    position: relative;
+}
+
+.process-number {
+    position: absolute;
+    top: var(--space-4);
+    right: var(--space-4);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+
+    color: var(--color-primary-500);
+    opacity: 0.8;
+}
+
+.process-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    margin-bottom: var(--space-4);
+
+    border-radius: var(--radius-lg);
+
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-600);
+
+    font-size: 1.25rem;
+
+    transition:
+        transform var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base);
+}
+
+.process-card:hover .process-icon {
+    transform: translateY(-3px);
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-0);
+}
+
+
+/* =========================================================
+   8. FAQ
+   ========================================================= */
+
+#kundliFaq {
+    width: 100%;
+}
+
+#kundliFaq .accordion-item {
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-surface);
+
+    margin-bottom: var(--space-3);
+}
+
+#kundliFaq .accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+#kundliFaq .accordion-button {
+    padding: var(--space-5);
+
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+
+    box-shadow: none;
+}
+
+#kundliFaq .accordion-button:not(.collapsed) {
+    background-color: var(--color-primary-50);
+    color: var(--color-primary-700);
+}
+
+#kundliFaq .accordion-button:focus {
+    box-shadow: 0 0 0 var(--focus-ring-width)
+        var(--color-focus-ring);
+}
+
+#kundliFaq .accordion-button::after {
+    transition: transform var(--transition-base);
+}
+
+#kundliFaq .accordion-body {
+    padding: 0 var(--space-5) var(--space-5);
+
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   9. CTA
+   ========================================================= */
+
+.cta-section {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--space-16);
+}
+
+.cta-section .section-title {
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.cta-section .section-description {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+.cta-section .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+
+/* =========================================================
+   10. KUNDLI PAGE BUTTON SPACING
+   ========================================================= */
+
+.about-section .btn,
+.cta-section .btn {
+    min-height: 48px;
+}
+
+
+/* =========================================================
+   11. RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .kundli-page-hero .page-title {
+        max-width: 760px;
+    }
+
+    .about-section .about-image {
+        margin-bottom: var(--space-2);
+    }
+
+    .process-number {
+        top: var(--space-3);
+        right: var(--space-3);
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    .about-feature {
+        padding: var(--space-3);
+    }
+
+    .about-feature i {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
+
+    .choose-icon,
+    .process-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    #kundliFaq .accordion-button {
+        padding: var(--space-4);
+
+        font-size: var(--font-size-sm);
+    }
+
+    #kundliFaq .accordion-body {
+        padding-inline: var(--space-4);
+    }
+
+    .cta-section .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-section .hero-buttons .btn {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .kundli-page-hero .page-title {
+        max-width: 100%;
+    }
+
+    .about-feature {
+        min-height: 56px;
+    }
+
+    .process-number {
+        font-size: var(--font-size-xs);
+    }
+
+}
+
+
+/* =========================================================
+   12. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .about-feature,
+    .choose-icon,
+    .process-icon,
+    #kundliFaq .accordion-button::after {
+        transition: none;
+    }
+
+}
+
+
+/* =========================================================
+   END OF KUNDLI.CSS
+   ========================================================= */

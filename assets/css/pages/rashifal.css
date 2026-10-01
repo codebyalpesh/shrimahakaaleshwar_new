@@ -1,0 +1,742 @@
+/* =========================================================
+   RASHIFAL PAGE
+   =========================================================
+   Page-specific styles only.
+
+   Common components such as:
+   - Buttons
+   - Section titles
+   - Service cards
+   - Choose cards
+   - Accordion
+   - Hero
+   - Footer
+   are handled by components.css / base.css.
+   ========================================================= */
+
+/* =========================================================
+   RASHIFAL SECTION NAVIGATION
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+#daily,
+#weekly,
+#monthly {
+    scroll-margin-top: 100px;
+}   
+
+.rashifal-hero-section,
+.rashifal-section,
+.about-rashifal-section,
+.services-rashifal-section,
+.cta-rashifal-section {
+    padding-block: var(--space-16);
+   }
+
+
+/* =========================================================
+   RASHIFAL TABS
+   ========================================================= */
+
+.rashifal-tabs {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    padding: var(--space-2);
+
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* ---------------------------------------------------------
+   TAB
+   --------------------------------------------------------- */
+
+.rashifal-tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: var(--space-2);
+
+    min-height: 44px;
+
+    padding: var(--space-3) var(--space-5);
+
+    border: 0;
+    border-radius: var(--radius-full);
+
+    background: transparent;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+
+/* ---------------------------------------------------------
+   TAB ICON
+   --------------------------------------------------------- */
+
+.rashifal-tab i {
+    font-size: 14px;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+.rashifal-tab:hover {
+    color: var(--color-primary);
+    background: var(--color-primary-50);
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE TAB
+   --------------------------------------------------------- */
+
+.rashifal-tab.active {
+    color: var(--color-white);
+
+    background: var(--color-primary);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVE HOVER
+   --------------------------------------------------------- */
+
+.rashifal-tab.active:hover {
+    color: var(--color-white);
+
+    background: var(--color-primary-600);
+}
+
+
+/* ---------------------------------------------------------
+   FOCUS
+   --------------------------------------------------------- */
+
+.rashifal-tab:focus-visible {
+    outline: 3px solid var(--color-focus-ring);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   RASHIFAL PANELS
+   ========================================================= */
+
+.rashifal-panel[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .rashifal-tabs {
+        width: 100%;
+
+        display: flex;
+
+        overflow-x: auto;
+
+        border-radius: var(--radius-lg);
+
+        scrollbar-width: none;
+    }
+
+    .rashifal-tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .rashifal-tab {
+        flex: 1 0 auto;
+
+        white-space: nowrap;
+
+        padding: var(--space-3) var(--space-4);
+    }
+
+}
+
+
+/* =========================================================
+   02. RASHIFAL DATE
+   ========================================================= */
+
+.rashifal-date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    min-height: 42px;
+    padding: var(--space-2) var(--space-4);
+
+    color: var(--color-secondary-700);
+    background-color: var(--color-secondary-50);
+
+    border: 1px solid var(--color-secondary-100);
+    border-radius: var(--radius-full);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+
+    box-shadow: var(--shadow-xs);
+}
+
+.rashifal-date i {
+    color: var(--color-primary-600);
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   03. RASHIFAL CARD
+   ========================================================= */
+
+.rashifal-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    padding: var(--space-5);
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
+
+    transition:
+        transform var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.rashifal-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        var(--color-primary-500),
+        var(--color-accent-500)
+    );
+
+    opacity: 0;
+
+    transition: opacity var(--transition-base);
+}
+
+.rashifal-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary-200);
+    box-shadow: var(--shadow-lg);
+}
+
+.rashifal-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   04. RASHIFAL CARD HEADER
+   ========================================================= */
+
+.rashifal-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+
+    margin-bottom: var(--space-4);
+}
+
+
+/* =========================================================
+   05. RASHI SYMBOL
+   ========================================================= */
+
+.rashi-symbol {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    color: var(--color-primary-700);
+    background-color: var(--color-primary-50);
+
+    border: 1px solid var(--color-primary-100);
+    border-radius: var(--radius-lg);
+
+    font-family: "Segoe UI Symbol", "Noto Sans Symbols 2", sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+
+    box-shadow: var(--shadow-xs);
+
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.rashifal-card:hover .rashi-symbol {
+    color: var(--color-secondary-700);
+    background-color: var(--color-accent-50);
+    border-color: var(--color-accent-200);
+
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   06. RASHIFAL CARD TITLE
+   ========================================================= */
+
+.rashifal-card-header h3 {
+    margin: 0 0 var(--space-1);
+
+    color: var(--color-text-primary);
+
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+}
+
+.rashifal-card-header span {
+    display: block;
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+
+/* =========================================================
+   07. RASHIFAL DESCRIPTION
+   ========================================================= */
+
+.rashifal-card > p {
+    margin: 0 0 var(--space-5);
+
+    color: var(--color-text-secondary);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-relaxed);
+}
+
+
+/* =========================================================
+   08. RASHIFAL DETAILS
+   ========================================================= */
+
+.rashifal-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: auto;
+
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.rashifal-details > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 78px;
+    padding: var(--space-3) var(--space-2);
+
+    text-align: center;
+}
+
+.rashifal-details > div + div {
+    border-left: 1px solid var(--color-border);
+}
+
+.rashifal-details i {
+    margin-bottom: var(--space-2);
+
+    color: var(--color-primary-500);
+
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.rashifal-details span {
+    margin-bottom: var(--space-1);
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+}
+
+.rashifal-details strong {
+    color: var(--color-text-primary);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+}
+
+
+/* =========================================================
+   09. RASHIFAL LUCKY NUMBER
+   ========================================================= */
+
+.rashifal-lucky {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+
+    background-color: var(--color-accent-50);
+
+    border: 1px solid var(--color-accent-100);
+    border-radius: var(--radius-lg);
+}
+
+.rashifal-lucky span {
+    color: var(--color-text-secondary);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+}
+
+.rashifal-lucky strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    color: var(--color-secondary-700);
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-accent-200);
+    border-radius: var(--radius-full);
+
+    font-family: var(--font-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+
+    box-shadow: var(--shadow-xs);
+}
+
+
+/* =========================================================
+   10. DAILY SECTION
+   ========================================================= */
+
+#daily {
+    scroll-margin-top: 100px;
+}
+
+#daily .row.g-4 {
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   11. WEEKLY SECTION
+   ========================================================= */
+
+#weekly {
+    scroll-margin-top: 100px;
+}
+
+#weekly .choose-card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   12. MONTHLY SECTION
+   ========================================================= */
+
+#monthly {
+    scroll-margin-top: 100px;
+}
+
+#monthly .service-card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   13. RASHI INFORMATION SECTION
+   ========================================================= */
+
+.about-section .choose-card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   14. FAQ SECTION
+   ========================================================= */
+
+#rashifalFaq {
+    width: 100%;
+}
+
+
+/* =========================================================
+   15. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .rashifal-tab,
+    .rashifal-card,
+    .rashi-symbol {
+        transition: none;
+    }
+
+    .rashifal-card:hover {
+        transform: none;
+    }
+
+    .rashifal-card:hover .rashi-symbol {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   16. LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+    .rashifal-card {
+        padding: var(--space-6);
+    }
+
+    .rashi-symbol {
+        width: 68px;
+        height: 68px;
+        font-size: 2.1rem;
+    }
+
+}
+
+
+/* =========================================================
+   17. TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .rashifal-tabs {
+        width: 100%;
+        border-radius: var(--radius-xl);
+    }
+
+    .rashifal-tab {
+        flex: 1 1 0;
+    }
+
+    .rashifal-card {
+        padding: var(--space-5);
+    }
+
+}
+
+
+/* =========================================================
+   18. MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .rashifal-tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: min(100%, 360px);
+
+        padding: var(--space-2);
+
+        border-radius: var(--radius-xl);
+    }
+
+    .rashifal-tab {
+        width: 100%;
+        min-height: 46px;
+    }
+
+    .rashifal-date {
+        width: auto;
+    }
+
+    .rashifal-card {
+        padding: var(--space-4);
+        border-radius: var(--radius-lg);
+    }
+
+    .rashifal-card-header {
+        gap: var(--space-3);
+        margin-bottom: var(--space-3);
+    }
+
+    .rashi-symbol {
+        width: 56px;
+        height: 56px;
+        font-size: 1.75rem;
+        border-radius: var(--radius-md);
+    }
+
+    .rashifal-card-header h3 {
+        font-size: var(--font-size-lg);
+    }
+
+    .rashifal-card > p {
+        margin-bottom: var(--space-4);
+    }
+
+    .rashifal-details > div {
+        min-height: 72px;
+        padding: var(--space-2);
+    }
+
+    .rashifal-lucky {
+        margin-top: var(--space-3);
+    }
+
+}
+
+
+/* =========================================================
+   19. SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+    .rashifal-tabs {
+        width: 100%;
+    }
+
+    .rashifal-date {
+        width: 100%;
+    }
+
+    .rashifal-card {
+        padding: var(--space-4);
+    }
+
+    .rashifal-details > div {
+        min-height: 68px;
+    }
+
+    .rashifal-details i {
+        font-size: 0.875rem;
+    }
+
+    .rashifal-details span,
+    .rashifal-details strong {
+        font-size: 0.7rem;
+    }
+
+}
+
+
+/* =========================================================
+   20. EXTRA SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 399.98px) {
+
+    .rashifal-card-header {
+        align-items: flex-start;
+    }
+
+    .rashi-symbol {
+        width: 52px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+
+    .rashifal-card-header h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .rashifal-details > div {
+        padding-left: var(--space-1);
+        padding-right: var(--space-1);
+    }
+
+    .rashifal-lucky {
+        padding: var(--space-3);
+    }
+
+}

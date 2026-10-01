@@ -1,0 +1,737 @@
+/* =========================================================
+   APPOINTMENT PAGE
+   ========================================================= */
+
+.appointment-hero-section {
+    padding-block: var(--space-16);
+}   
+
+/* =========================================================
+   APPOINTMENT INTRO
+   ========================================================= */
+
+.appointment-intro {
+    position: relative;
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   APPOINTMENT SECTION
+   ========================================================= */
+
+.appointment-section {
+    background: var(--color-surface-soft, #f8f5f0);
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   APPOINTMENT CARD
+   ========================================================= */
+
+.appointment-card {
+    position: relative;
+    overflow: hidden;
+
+    background: var(--color-white, #ffffff);
+
+    border: 1px solid
+        var(--color-border, rgba(0, 0, 0, 0.08));
+
+    border-radius: var(--radius-xl, 24px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   APPOINTMENT SIDEBAR
+   ========================================================= */
+
+.appointment-sidebar {
+    height: 100%;
+
+    padding: 3.5rem 2.75rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--color-maroon, #7b1e1e) 0%,
+            var(--color-maroon-dark, #521010) 100%
+        );
+
+    color: var(--color-white, #ffffff);
+}
+
+
+/* Subtitle inside sidebar */
+
+.appointment-sidebar .section-subtitle {
+    color: var(--color-gold, #d4af37);
+}
+
+
+/* Sidebar heading */
+
+.appointment-sidebar h2 {
+    margin: 1rem 0 1.25rem;
+
+    color: var(--color-white, #ffffff);
+
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+/* Heading highlight */
+
+.appointment-sidebar h2 span {
+    display: inline-block;
+
+    color: var(--color-gold, #d4af37);
+}
+
+
+/* Sidebar paragraph */
+
+.appointment-sidebar-text {
+    margin-bottom: 2rem;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   APPOINTMENT CONTACT LIST
+   ========================================================= */
+
+.appointment-contact-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1.25rem;
+
+    margin-top: 2rem;
+}
+
+
+/* Contact item */
+
+.appointment-contact-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+}
+
+
+/* Contact icon */
+
+.appointment-contact-icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212, 175, 55, 0.12);
+
+    border: 1px solid
+        rgba(212, 175, 55, 0.25);
+
+    color: var(--color-gold, #d4af37);
+
+    font-size: 1rem;
+}
+
+
+/* Contact content */
+
+.appointment-contact-content {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.2rem;
+}
+
+
+/* Contact label */
+
+.appointment-contact-label {
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 0.78rem;
+
+    line-height: 1.2;
+}
+
+
+/* Contact links/text */
+
+.appointment-contact-content a,
+.appointment-contact-content > span:last-child {
+    color: var(--color-white, #ffffff);
+
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.appointment-contact-content a:hover,
+.appointment-contact-content a:focus-visible {
+    color: var(--color-gold, #d4af37);
+}
+
+
+/* =========================================================
+   APPOINTMENT NOTE
+   ========================================================= */
+
+.appointment-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.75rem;
+
+    margin-top: 2.5rem;
+
+    padding: 1rem 1.1rem;
+
+    border-radius: var(--radius-md, 12px);
+
+    background:
+        rgba(255, 255, 255, 0.07);
+
+    border: 1px solid
+        rgba(255, 255, 255, 0.10);
+}
+
+
+.appointment-note > i {
+    flex: 0 0 auto;
+
+    margin-top: 0.2rem;
+
+    color: var(--color-gold, #d4af37);
+}
+
+
+.appointment-note p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 0.82rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+   ========================================================= */
+
+.appointment-form-wrapper {
+    height: 100%;
+
+    padding: 3.5rem 2.75rem;
+
+    background: var(--color-white, #ffffff);
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.appointment-form-header {
+    margin-bottom: 2rem;
+}
+
+
+.appointment-form-header h3 {
+    margin-bottom: 0.4rem;
+
+    color: var(--color-heading, #171717);
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+}
+
+
+.appointment-form-header p {
+    margin: 0;
+
+    color: var(--color-text-muted, #6b6b6b);
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   REQUIRED MARK
+   ========================================================= */
+
+.required-mark {
+    color: var(--color-maroon, #7b1e1e);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CUSTOM INPUT GROUP
+   ========================================================= */
+
+.input-group-custom {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* Input icon */
+
+.input-group-custom > i {
+    position: absolute;
+
+    left: 1rem;
+
+    z-index: 2;
+
+    color: var(--color-maroon, #7b1e1e);
+
+    font-size: 0.9rem;
+
+    pointer-events: none;
+}
+
+
+/* Form control */
+
+.input-group-custom .form-control {
+    min-height: 52px;
+
+    padding: 0.75rem 1rem 0.75rem 2.8rem;
+
+    border: 1px solid
+        var(--color-border, #e3e3e3);
+
+    border-radius: var(--radius-md, 10px);
+
+    background: var(--color-white, #ffffff);
+
+    color: var(--color-heading, #171717);
+
+    font-size: 0.92rem;
+
+    box-shadow: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.input-group-custom .form-control::placeholder {
+    color: #999;
+
+    opacity: 1;
+}
+
+
+/* Select */
+
+.input-group-custom select.form-control {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+
+/* Focus */
+
+.input-group-custom .form-control:focus {
+    border-color:
+        var(--color-maroon, #7b1e1e);
+
+    background: var(--color-white, #ffffff);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(123, 30, 30, 0.08);
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.textarea-group {
+    align-items: flex-start;
+}
+
+
+.textarea-group > i {
+    top: 1rem;
+}
+
+
+.textarea-group textarea.form-control {
+    min-height: 130px;
+
+    resize: vertical;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FORM LABEL
+   ========================================================= */
+
+.appointment-form .form-label {
+    display: block;
+
+    margin-bottom: 0.55rem;
+
+    color: var(--color-heading, #171717);
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.appointment-form .form-control:invalid:not(:placeholder-shown) {
+    border-color:
+        rgba(123, 30, 30, 0.45);
+}
+
+
+.appointment-form .form-control:valid {
+    /* Intentionally subtle.
+       Avoid aggressive green styling. */
+}
+
+
+/* =========================================================
+   CONSENT
+   ========================================================= */
+
+.appointment-consent {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.5rem;
+
+    margin-top: 0.15rem;
+}
+
+
+.appointment-consent .form-check-input {
+    flex: 0 0 auto;
+
+    width: 18px;
+    height: 18px;
+
+    margin-top: 0.2rem;
+
+    border-color:
+        var(--color-border, #d5d5d5);
+
+    cursor: pointer;
+}
+
+
+.appointment-consent .form-check-input:checked {
+    background-color:
+        var(--color-maroon, #7b1e1e);
+
+    border-color:
+        var(--color-maroon, #7b1e1e);
+}
+
+
+.appointment-consent .form-check-input:focus {
+    border-color:
+        var(--color-maroon, #7b1e1e);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(123, 30, 30, 0.08);
+}
+
+
+.appointment-consent .form-check-label {
+    color: var(--color-text-muted, #6b6b6b);
+
+    font-size: 0.82rem;
+
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.appointment-submit-btn {
+    min-height: 54px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+
+    letter-spacing: 0.01em;
+}
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+.how-it-works {
+    padding-block: var(--space-16);
+}
+
+/* =========================================================
+   PROCESS CARDS
+   Page-specific enhancement only.
+   Base process-card remains in components.css.
+   ========================================================= */
+
+.appointment-section ~ section .process-card {
+    height: 100%;
+}
+
+/* =========================================================
+   IMPORTANT INFORMATION
+   ========================================================= */
+.important-information {
+    padding-block: var(--space-16);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   LARGE TABLET / SMALL DESKTOP
+   --------------------------------------------------------- */
+
+@media (max-width: 1199.98px) {
+
+    .appointment-sidebar,
+    .appointment-form-wrapper {
+        padding: 3rem 2.25rem;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 991.98px) {
+
+    .appointment-card {
+        border-radius: var(--radius-lg, 18px);
+    }
+
+
+    .appointment-sidebar {
+        height: auto;
+
+        padding: 2.75rem 2rem;
+    }
+
+
+    .appointment-form-wrapper {
+        padding: 2.75rem 2rem;
+    }
+
+
+    .appointment-sidebar h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    .appointment-card {
+        border-radius: 16px;
+
+        box-shadow:
+            0 12px 35px rgba(0, 0, 0, 0.07);
+    }
+
+
+    .appointment-sidebar,
+    .appointment-form-wrapper {
+        padding: 2rem 1.25rem;
+    }
+
+
+    .appointment-sidebar h2 {
+        margin-top: 0.75rem;
+
+        font-size: 1.75rem;
+    }
+
+
+    .appointment-sidebar-text {
+        font-size: 0.9rem;
+    }
+
+
+    .appointment-contact-list {
+        gap: 1rem;
+
+        margin-top: 1.5rem;
+    }
+
+
+    .appointment-contact-icon {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+
+    .appointment-note {
+        margin-top: 2rem;
+
+        padding: 0.9rem;
+    }
+
+
+    .appointment-form-wrapper {
+        padding-top: 2.25rem;
+    }
+
+
+    .appointment-form-header {
+        margin-bottom: 1.5rem;
+    }
+
+
+    .input-group-custom .form-control {
+        min-height: 50px;
+    }
+
+
+    .appointment-submit-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 575.98px) {
+
+    .appointment-sidebar,
+    .appointment-form-wrapper {
+        padding: 1.75rem 1rem;
+    }
+
+
+    .appointment-sidebar h2 {
+        font-size: 1.6rem;
+    }
+
+
+    .appointment-contact-item {
+        align-items: flex-start;
+    }
+
+
+    .appointment-contact-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+    }
+
+
+    .appointment-contact-content a,
+    .appointment-contact-content > span:last-child {
+        font-size: 0.88rem;
+    }
+
+
+    .appointment-consent .form-check-label {
+        font-size: 0.78rem;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .appointment-contact-content a,
+    .input-group-custom .form-control {
+        transition: none;
+    }
+
+}
